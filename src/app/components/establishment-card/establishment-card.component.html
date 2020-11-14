@@ -1,0 +1,11 @@
+<a class="card" routerLink="/edit/{{ establishment.id }}">
+  <img src="{{ establishment.picture }}" alt="" />
+  <div>
+    <h2 class="title">
+      {{ establishment.name }}<span>{{ establishment.id }}</span>
+    </h2>
+    <p class="address">
+      {{ establishment.address }}
+    </p>
+  </div>
+</a>

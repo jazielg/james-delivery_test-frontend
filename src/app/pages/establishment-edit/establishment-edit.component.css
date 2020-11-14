@@ -1,0 +1,107 @@
+.card {
+  max-width: 950px;
+  width: 90%;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 30px;
+  border: 1px solid #f9f9f9;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.card .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card .header button {
+  background: transparent;
+  border: none;
+  font-size: 30px;
+}
+
+.card .header img {
+  height: 74px;
+  margin: 0 20px;
+}
+
+form fieldset {
+  border: 0;
+  margin-bottom: 15px;
+}
+
+form fieldset legend {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+form hr {
+  border: 1px solid #e6e8f0;
+  margin: 20px 0 10px;
+}
+
+form .form-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  margin: 20px 0;
+}
+
+form .form-subgroup {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 16px;
+}
+
+form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #4c5164;
+}
+
+form .form-group input {
+  width: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    #f8f9fd;
+  border: 1px solid #e6e8f0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 40px;
+  padding: 0 15px;
+  color: #7b7e8c;
+}
+
+form .form-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+form .form-button button.btn-success {
+  margin-top: 60px;
+  background: #28cc9b;
+  border-radius: 100px;
+  border: 0;
+  color: #fff;
+  padding: 13px 30px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+form .form-button button.btn-success:hover {
+  background: #1b8b6a;
+}
+
+@media (max-width: 720px) {
+  form .form-group {
+    grid-template-columns: 1fr;
+  }
+
+  form .form-subgroup {
+    grid-template-columns: 2fr 1fr;
+  }
+}
