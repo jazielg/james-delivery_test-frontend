@@ -1,27 +1,56 @@
-# JamesDeliveryTestFrontend
+# James Delivery Test Frontend
+
+<h1 align="center">
+    <img alt="Home" title="/" src=".github/home.png" height="250px" />
+    <img alt="Edit" title="/edit/:id" src=".github/edit.png" height="250px" />
+    <img alt="Edit mobile" title="/edit/:id" src=".github/edit-mobile.png" height="250px" />
+</h1>
+
+## 💻 Projeto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-## Development server
+Project developed for the [James Delivery](https://jamesdelivery.com.br) front-end developer test.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## :rocket: Technologies
 
-## Code scaffolding
+This project was developed with the following technologies:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Angular](https://angular.io)
+
+## :hammer: How to use
+
+To clone and use this application, you will need [Git](https://git-scm.com/), Node.js v12 and [Npm](https://www.npmjs.com) installed.
+
+### Start application
+
+```bash
+# Enter the directory
+cd james-delivery_test-frontend
+
+# Install dependencies
+npm install
+
+# Start application on port 4200
+ng serve --open
+```
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## 🧠 Challenge
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In the following link you will find the description of the challenge.
 
-## Running end-to-end tests
+[Frontend challenge](https://github.com/james-delivery/frontend-challenge)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
+## :information_source: Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## :memo: License
+
+This project is under the MIT license. See the [LICENSE](LICENSE.md) file for more details.
