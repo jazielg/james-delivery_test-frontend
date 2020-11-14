@@ -6,7 +6,7 @@
     <img alt="Edit mobile" title="/edit/:id" src=".github/edit-mobile.png" height="250px" />
 </h1>
 
-## 💻 Projeto
+## 💻 Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
