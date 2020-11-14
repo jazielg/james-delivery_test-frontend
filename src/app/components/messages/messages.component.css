@@ -1,0 +1,40 @@
+.card-message {
+  position: absolute;
+  right: 50px;
+  top: 40px;
+  padding: 10px;
+  overflow: hidden;
+  background: #8d30cc80;
+  color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: 1s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-message h2 {
+  display: inline-block;
+  color: #8d30cc;
+}
+
+.card-message .title-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-message button {
+  border-radius: 50px;
+  width: 29px;
+  border: 2px solid #8d30cc;
+  color: #8d30cc;
+  font-weight: 500;
+  padding: 0 0 2px;
+  background: transparent;
+}

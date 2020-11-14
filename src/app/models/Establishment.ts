@@ -19,6 +19,8 @@ export class Establishment {
   account_type?: string;
   document_number?: string;
   agency?: string;
+  agency_digit?: string;
   account?: string;
+  account_digit?: string;
   automatic_withdrawal?: boolean;
 }

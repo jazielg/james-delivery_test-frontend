@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Establishment } from 'src/app/models/Establishment';
+import { MessageService } from 'src/app/services/messages/message.service';
 
 @Injectable({
   providedIn: 'root',
@@ -16,13 +17,16 @@ export class EstablishmentService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  constructor(private http: HttpClient) {}
+  establishmentStorage = localStorage.getItem('establishments');
+
+  constructor(
+    private http: HttpClient,
+    private messageService: MessageService
+  ) {}
 
   getEstablishments(): Observable<Establishment[]> {
-    const establishmentStorage = localStorage.getItem('establishments');
-
-    if (establishmentStorage) {
-      const establishmentJSON = JSON.parse(establishmentStorage);
+    if (this.establishmentStorage) {
+      const establishmentJSON = JSON.parse(this.establishmentStorage);
       return of(establishmentJSON);
     }
 
@@ -36,16 +40,21 @@ export class EstablishmentService {
 
   getEstablishment(id: string): Observable<Establishment> {
     const url = `${this.apiUrl}/${id}`;
-    const establishmentStorage = localStorage.getItem('establishments');
 
-    if (establishmentStorage) {
-      const establishmentJSON = JSON.parse(establishmentStorage);
+    if (this.establishmentStorage) {
+      const establishmentJSON = JSON.parse(this.establishmentStorage);
 
       const establishmentResult = establishmentJSON.find(
         (establishment) => id === establishment.id
       );
 
-      return of(establishmentResult);
+      if (establishmentResult) {
+        return of(establishmentResult);
+      }
+
+      this.log(`Error`, `Establishment not found!`);
+
+      return of();
     }
 
     return this.http
@@ -56,10 +65,8 @@ export class EstablishmentService {
   updateEstablishment(
     establishmentData: Establishment
   ): Observable<Establishment> {
-    const establishmentStorage = localStorage.getItem('establishments');
-
-    if (establishmentStorage) {
-      const establishmentJSON = JSON.parse(establishmentStorage);
+    if (this.establishmentStorage) {
+      const establishmentJSON = JSON.parse(this.establishmentStorage);
 
       const index = establishmentJSON.findIndex(
         (establishment) => establishmentData.id === establishment.id
@@ -69,6 +76,8 @@ export class EstablishmentService {
 
       localStorage.setItem('establishments', JSON.stringify(establishmentJSON));
 
+      this.log(`Success!`, `Establishment updated!`);
+
       return of(establishmentJSON[index]);
     }
 
@@ -77,14 +86,15 @@ export class EstablishmentService {
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-      // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead
+      console.error(error);
 
-      // TODO: better job of transforming error for user consumption
-      // this.log(`${operation} failed: ${error.message}`);
+      this.log(`${operation} failed`, `${error.message}`);
 
-      // Let the app keep running by returning an empty result.
       return of(result as T);
     };
+  }
+
+  private log(title: string, message: string) {
+    this.messageService.add(title, message);
   }
 }

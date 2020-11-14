@@ -1,0 +1,7 @@
+<div class="card-message" [ngClass]="{ show: messageService.messages.length }">
+  <div class="title-message">
+    <h2>{{ messageService.title }}</h2>
+    <button class="clear" (click)="messageService.clear()">x</button>
+  </div>
+  <div *ngFor="let message of messageService.messages">{{ message }}</div>
+</div>

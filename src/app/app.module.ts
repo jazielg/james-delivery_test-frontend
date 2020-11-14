@@ -9,6 +9,7 @@ import { EstablishmentsComponent } from './pages/establishments/establishments.c
 import { EstablishmentEditComponent } from './pages/establishment-edit/establishment-edit.component';
 import { EstablishmentCardComponent } from './components/establishment-card/establishment-card.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HeaderComponent } from './layout/header/header.component';
     EstablishmentEditComponent,
     EstablishmentCardComponent,
     HeaderComponent,
+    MessagesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

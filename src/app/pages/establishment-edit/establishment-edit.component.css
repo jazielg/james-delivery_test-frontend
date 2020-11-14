@@ -34,6 +34,7 @@ form fieldset {
 form fieldset legend {
   font-size: 16px;
   font-weight: 500;
+  color: #4c5164;
 }
 
 form hr {
@@ -60,7 +61,8 @@ form .form-group label {
   color: #4c5164;
 }
 
-form .form-group input {
+form .form-group input,
+form .form-group select {
   width: 100%;
   background: linear-gradient(
       0deg,
@@ -74,6 +76,7 @@ form .form-group input {
   height: 40px;
   padding: 0 15px;
   color: #7b7e8c;
+  font-size: 14px;
 }
 
 form .form-button {
@@ -97,6 +100,10 @@ form .form-button button.btn-success:hover {
 }
 
 @media (max-width: 720px) {
+  .card .header {
+    flex-direction: column;
+  }
+
   form .form-group {
     grid-template-columns: 1fr;
   }

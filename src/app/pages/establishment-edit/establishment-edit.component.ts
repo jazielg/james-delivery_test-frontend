@@ -32,8 +32,10 @@ export class EstablishmentEditComponent implements OnInit {
     account_type: '',
     document_number: '',
     agency: '',
+    agency_digit: '',
     account: '',
-    automatic_withdrawal: true,
+    account_digit: '',
+    automatic_withdrawal: false,
   };
 
   title: string;

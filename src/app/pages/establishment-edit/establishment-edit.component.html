@@ -81,22 +81,53 @@
 
       <div class="form-group">
         <div class="input-group">
-          <label for="">Agência</label>
+          <label for="agency">Agência</label>
           <div class="form-subgroup">
-            <input type="text" />
-            <input type="text" />
+            <input
+              type="text"
+              [(ngModel)]="establishment.agency"
+              name="agency"
+              type="text"
+              id="agency"
+            />
+            <input
+              type="text"
+              [(ngModel)]="establishment.agency_digit"
+              name="agency_digit"
+              type="text"
+              id="agency_digit"
+            />
           </div>
         </div>
         <div class="input-group">
-          <label for="">Conta</label>
+          <label for="account">Conta</label>
           <div class="form-subgroup">
-            <input type="text" />
-            <input type="text" />
+            <input
+              type="text"
+              [(ngModel)]="establishment.account"
+              name="account"
+              type="text"
+              id="account"
+            />
+            <input
+              type="text"
+              [(ngModel)]="establishment.account_digit"
+              name="account_digit"
+              type="text"
+              id="account_digit"
+            />
           </div>
         </div>
         <div class="input-group">
-          <label for="">Saque automático?</label>
-          <input type="text" />
+          <label for="automatic_withdrawal">Saque automático?</label>
+          <select
+            [(ngModel)]="establishment.automatic_withdrawal"
+            name="automatic_withdrawal"
+            id="automatic_withdrawal"
+          >
+            <option [ngValue]="false">Não</option>
+            <option [ngValue]="true">Sim</option>
+          </select>
         </div>
       </div>
     </fieldset>

@@ -24,6 +24,7 @@ a.card {
   font-size: 14px;
   font-weight: 300;
   margin-left: 20px;
+  line-break: anywhere;
 }
 
 .card img {
