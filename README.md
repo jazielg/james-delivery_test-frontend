@@ -16,17 +16,19 @@ Project developed for the [James Delivery](https://jamesdelivery.com.br) front-e
 
 This project was developed with the following technologies:
 
-- [Node.js](https://nodejs.org/en/)
-- [TypeScript](https://www.typescriptlang.org/)
 - [Angular](https://angular.io)
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## :hammer: How to use
 
-To clone and use this application, you will need [Git](https://git-scm.com/), Node.js v12 and [Npm](https://www.npmjs.com) installed.
+To clone and use this application, you will need [Git](https://git-scm.com/), Node.js v12, [Npm](https://www.npmjs.com) and Angular v10 installed.
 
-### Start application
+### Start development environment
 
 ```bash
+# Clone application
+git clone https://github.com/jazielg/james-delivery_test-frontend.git
+
 # Enter the directory
 cd james-delivery_test-frontend
 
@@ -37,7 +39,7 @@ npm install
 ng serve --open
 ```
 
-## Build
+### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
